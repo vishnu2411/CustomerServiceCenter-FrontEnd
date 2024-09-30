@@ -5,19 +5,26 @@ const ContactOptions: React.FC = () => {
   return (
     <div className="contact-options">
       <img
-        src="https://via.placeholder.com/100"
+        src="https://static.vecteezy.com/system/resources/previews/014/873/884/original/customer-service-icon-call-center-icon-design-illustration-customer-service-icon-simple-and-modern-flat-symbol-vector.jpg"
         alt="Profile"
         className="profile-photo"
       />
-      <h3>Contact Us</h3>
+      <div>
+      <h3>Questions?</h3>
+      <hr className="separator" />
+      <h4>Contact Us</h4>
+      </div>
+      
       <div className="options">
         <div className="option">
           <Phone />
-          <span>Call</span>
+          <span>
+            (123) 456-7890
+          </span>
         </div>
         <div className="option">
           <Sms />
-          <span>Text</span>
+          <span>(123) 456-7891</span>
         </div>
         <div className="option">
           <Chat />
@@ -29,6 +36,7 @@ const ContactOptions: React.FC = () => {
         </div>
       </div>
     </div>
+    
   );
 };
 

@@ -5,21 +5,24 @@ import ContactOptions from './components/ContactOptions';
 
 const App: React.FC = () => {
   const regularHours = {
-    "Monday-Thursday": "8am ET - 7:45pm ET",
-    "Friday": "9am ET - 7:45pm ET",
-    "Saturday-Sunday": "9am ET - 5:45pm ET"
+    "Monday - Thursday": "8 am - 7:45 pm",
+    "Friday": "9 am - 7:45 pm",
+    "Saturday": "9 am - 5:45 pm",
+    "Sunday": "9 am - 5:45 pm"
   };
 
   const specialHours = [
-    { date: "2024-12-25", hours: "Closed" },
-    { date: "2024-11-30", hours: "10am ET - 3pm ET" }
+    { hours: "8:45 am - 7:45 pm" }
   ];
 
   return (
     <div className="App">
       <h1>Customer Service Hours</h1>
-      <ContactOptions />
-      <HoursDisplay regularHours={regularHours} specialHours={specialHours} />
+      <div className="container-box"> {/* New box for content */}
+        <ContactOptions />
+        <hr className="separator" />
+        <HoursDisplay regularHours={regularHours} specialHours={specialHours} />
+      </div>
     </div>
   );
 };
