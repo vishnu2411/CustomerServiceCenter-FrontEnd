@@ -1,26 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import HoursDisplay from './components/HoursDisplay';
 import ContactOptions from './components/ContactOptions';
+import SpecialHoursForm from './components/SpecialHoursForm';
+import { regularHours, specialHours as initialSpecialHours } from './data';
 
 const App: React.FC = () => {
-  const regularHours = {
-    "Monday - Thursday": "8 am - 7:45 pm",
-    "Friday": "9 am - 7:45 pm",
-    "Saturday": "9 am - 5:45 pm",
-    "Sunday": "9 am - 5:45 pm"
-  };
+  const [specialHours, setSpecialHours] = useState(initialSpecialHours);
 
-  const specialHours = [
-    { hours: "8:45 am - 7:45 pm" }
-  ];
+  const handleAddSpecialHours = (newHours: string) => {
+    setSpecialHours([...specialHours, { hours: newHours }]);
+  };
 
   return (
     <div className="App">
-      <h1>Customer Service Hours</h1>
-      <div className="container-box"> {/* New box for content */}
+      <div className="outer-container">
         <ContactOptions />
-        <hr className="separator" />
+        <SpecialHoursForm onSubmit={handleAddSpecialHours} />
         <HoursDisplay regularHours={regularHours} specialHours={specialHours} />
       </div>
     </div>

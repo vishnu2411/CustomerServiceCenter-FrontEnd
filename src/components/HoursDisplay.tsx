@@ -1,3 +1,4 @@
+// src/components/HoursDisplay.tsx
 import React from 'react';
 
 interface HoursDisplayProps {
@@ -15,13 +16,14 @@ const HoursDisplay: React.FC<HoursDisplayProps> = ({ regularHours, specialHours 
         </>
       )}
       <h3>Regular Hours</h3>
-      <ul className="hours-list">
+      <div className="hours-list">
         {Object.entries(regularHours).map(([day, hours]) => (
-          <li key={day}>
-            {day}: {hours}
-          </li>
+          <div key={day} className="hours-item">
+            <h4>{day}</h4>
+            <p>{hours}</p>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

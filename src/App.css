@@ -19,6 +19,11 @@
   width: 100%; /* Full width */
 }
 
+.header-section {
+  text-align: center; /* Center the header text */
+  width:100%;
+}
+
 
 .contact-options {
   display: flex;
@@ -98,18 +103,64 @@
   font-weight: bold; /* Optional: make it bold */
 }
 
+.outer-container {
+  border: 2px solid #007bff; /* Blue border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding inside the border */
+  background-color: #ffffff; /* Background color for the outer container */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  max-width: 1000px; /* Limit max width */
+  margin: auto; /* Center in parent */
+}
+
 .separator {
+  padding-bottom: 0px;
   border: none; /* Remove default border */
   border-top: 1px solid #7c95ad; /* Add a solid line */
-  margin: 20px auto; /* Space above and below the line, center it */
+  margin: 10px auto; /* Reduce space above and below the line */
+  margin-top: 20px;
   width: 50%; /* Set a fixed width for the line */
+  align-items: center;
 }
 
-.contact-options .separator{
-  border: none; /* Remove default border */
-  border-top: 1px solid #7c95ad; /* Add a solid line */
-  margin: 20px auto; /* Space above and below the line, center it */
-  width: 30 px; /* Set a fixed width for the line */
+.hours-section {
+  text-align: center; /* Center text */
+  margin-bottom: 20px; /* Space below the hours section */
 }
 
+.special-hours-form {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px; /* Space below the form */
+}
+
+.special-hours-form input {
+  padding: 0px;
+  margin-bottom: 10px; /* Space below the input */
+  border: 1px solid #ced4da; /* Border for the input */
+  border-radius: 4px; /* Rounded corners */
+  width: 250px; /* Fixed width for the input */
+  height: 50px;
+  text-align: center;
+}
+
+.special-hours-form button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff; /* Primary button color */
+  color: white; /* Button text color */
+  cursor: pointer;
+}
+
+.special-hours-form button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+.special-hours-form button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
 
