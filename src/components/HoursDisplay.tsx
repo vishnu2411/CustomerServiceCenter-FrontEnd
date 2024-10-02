@@ -1,4 +1,4 @@
-// src/components/HoursDisplay.tsx
+
 import React from 'react';
 
 interface HoursDisplayProps {
@@ -12,7 +12,9 @@ const HoursDisplay: React.FC<HoursDisplayProps> = ({ regularHours, specialHours 
       {specialHours.length > 0 && (
         <>
           <h3 className="special-hours">Special Hours</h3>
-          <p className="special-hours">{specialHours[0].hours}</p>
+          {specialHours.map((special, index) => (
+            <p key={index} className="special-hours">{special.hours}</p>
+          ))}
         </>
       )}
       <h3>Regular Hours</h3>

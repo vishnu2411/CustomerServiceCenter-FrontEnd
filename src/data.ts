@@ -1,4 +1,4 @@
-// src/data.ts
+
 export const regularHours = {
     "Monday - Thursday": "8 am - 7:45 pm",
     "Friday": "9 am - 7:45 pm",

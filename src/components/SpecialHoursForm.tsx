@@ -1,4 +1,4 @@
-// src/components/SpecialHoursForm.tsx
+//This form is used to take input of special hours and add the special hours to the special horss section
 import React, { useState } from 'react';
 
 const SpecialHoursForm: React.FC<{ onSubmit: (hours: string) => void }> = ({ onSubmit }) => {
@@ -8,7 +8,7 @@ const SpecialHoursForm: React.FC<{ onSubmit: (hours: string) => void }> = ({ onS
     e.preventDefault();
     if (hours) {
       onSubmit(hours);
-      setHours(''); // Reset the input field
+      setHours(''); 
     }
   };
 
